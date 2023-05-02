@@ -6,17 +6,13 @@ puts "----------"
 
 
 
-store = Store.find_by(id: 1)
-store = @store1
+@store1 = Store.find_by(id: 1)
+@store2 = Store.find_by(id: 2)
 
-store = Store.find_by(id: 2)
-store = @store2
 
-store = Store.find_by(id: 1)
-store.update(name: 'first')
+@store1.name = "First"
+@store1.save
 
-puts @store1
-puts @store2
 
 ### Exercise 2: Update the first store
 
